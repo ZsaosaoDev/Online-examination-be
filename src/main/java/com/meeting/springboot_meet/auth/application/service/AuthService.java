@@ -77,8 +77,6 @@ public class AuthService {
         emailService.sendVerificationEmail(request.getEmail(), token);
     }
 
-
-
     @Transactional
     public void verifyEmailToken(String token) {
         String value = redisVerificationService.getVerification(token);
